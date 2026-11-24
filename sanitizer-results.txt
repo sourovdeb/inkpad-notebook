@@ -1,0 +1,7 @@
+Sanitizer status
+
+Host tests: passed.
+AddressSanitizer: not rerun for 0.3.0.
+UndefinedBehaviorSanitizer: not rerun for 0.3.0.
+LeakSanitizer: not available here.
+Reader runtime: not tested.

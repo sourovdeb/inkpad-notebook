@@ -1,0 +1,6 @@
+InkPad Notebook 0.3.0
+
+Host build: passed.
+Host tests: passed.
+ARM build: pending SDK availability.
+Reader run: pending hardware.

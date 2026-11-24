@@ -1,0 +1,58 @@
+PocketBook Typewriter PB743K3 source
+Integrity manifest.
+Target: PB743K3.
+Firmware: U743K3.6.10.2854.
+SDK build: B300 6.8 passed.
+Hardware test: pending.
+
+CRC32     SIZE      SHA256  PATH
+c3100993       255  75b3da2dcc15ddb6770ccb183ff8393ed2d6b54a7dec999ace3c2872b9d8dcc9  pocketbook/.gitignore
+6c0f6d67      1028  4ab9c9a8cc519e31ec2d870b4f27f840ddd4b035981da114c58f4b30361738c0  pocketbook/BUILD_PB633.md
+9aaec42c      1436  aece7785628bfcdbfaf0f96f4e69ae0ac8d5f74c727366998399b376a29a795e  pocketbook/BUILD_PB743K3.md
+8080d891      4740  7ebb7f1a026833397a37da9465901e72faccaf38766ac70a991c4d63160391b3  pocketbook/CMakeLists.txt
+0e1b4286      3942  7fa08850af998a4a90c3c3d9b1f12e6ef9b8e3c4fcd663fe80128bf3e16dacc0  pocketbook/INKPAD.md
+97673d00     35149  3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986  pocketbook/LICENSE
+0f626dee      1744  0fc792f21b76e34b7694da113f0b802be39a538b1ecc0a967b79f4ad69cd7c44  pocketbook/PB633_INSTALL.md
+4e205023      1136  3a7c7acc54245910f3e4549034dd8732983edcf5d3e957f45ba395f5df4d0b48  pocketbook/README.md
+3b6aba55      1283  994e8de5ba8af456105a410ecb2eb0377053269932296699b6e65ab7d2f2cedf  pocketbook/UPSTREAM.md
+26280f59       530  fb9edc4c5edf379d608df8d4a549265162e531f68bfd17f8845dc1a7c6fea1cd  pocketbook/kbLayouts/de.keys
+96d894c4       450  99e05d1c3227852eabfc56b7128b08f3da538057f9a2ee07d4f29485f2d76e48  pocketbook/kbLayouts/en.keys
+96c4e60b       753  48e76084dc8c72ca46c10527360fc971d7dc377b97c7a977b5544a02871ab452  pocketbook/kbLayouts/fr.keys
+57ee0966      1955  91e0960762e56df275185f73b51014f894ed5f4afdbfb1fd2231e11b519183de  pocketbook/src/api/fileBrowser.cpp
+c7b26565       596  0f14b50662b46ae24ce26ee4cdd92382c83f5d80ce2e3c6290f41f3c5778eb31  pocketbook/src/api/fileBrowser.h
+97e6e0c1       501  e411fe9ea724533f7d10e1f1e1230e5a100154ccccedb00cfd4852f58c02c5aa  pocketbook/src/api/fileModel.h
+429a34eb      1754  a767e228734fc4636a15b5f2ee6a7ff836394ce3042a3c963f37787d851cec9f  pocketbook/src/core/text_core.cpp
+17b3e15e       425  32d61bc2385f967168b8c979d5fe65167ad670f79b0d7e663a30368efb20a52d  pocketbook/src/core/text_core.h
+8e0054af      5706  1aea5e67bdd3f6d550f2d099f963fd4116f5abe9cd1237736a9b88c4577674bc  pocketbook/src/device/device_match.cpp
+d05d5bc3      1048  3ce303ad124a80e85f31fbfeabec856a537fb90c759a6bff7bcf3ffb5eaab2e6  pocketbook/src/device/device_match.h
+c55b90e7      4682  5abf6e6b43f0b36a7e3923a6c506816c06829b3b0b57de2b8c52327bb9b8a5e7  pocketbook/src/device/input_scan.cpp
+f7be89a0       754  e271ea4f4d2ef937ea318ba82c8701b89e938129924915dcf1a5278ea0e9cf38  pocketbook/src/device/input_scan.h
+01712df7       753  04c8d5891f755ed827d0f3a8c97130236d9a290cf16e46c3aac5a3a204117057  pocketbook/src/device/keymap_default.h
+d90f7dd3      3631  c89e27a55a44c01a4d88ed6801500693a6389c5983a6ce446109c2dd95812c9a  pocketbook/src/device/keymap_parse.h
+242aaf17     12656  108de691b97c3adfc498567140a01cecf916729c545ee2342af5bdcedf403ebc  pocketbook/src/handler/eventHandler.cpp
+112b8d18      3156  60a927e2b518506e491ca886ea621439ff4fdaba3b43de48388436dea499eb7c  pocketbook/src/handler/eventHandler.h
+dc618d51      1213  c2910140ae4266b0ce7b0503508f1882ca88e6b0b0a5d282ed2c213e2fb9be84  pocketbook/src/handler/mainMenu.cpp
+8ba5083c      1347  354565ca1740eea58dbb4a9cb922cd445b972263a99eb57dd08f7dc258eebb0e  pocketbook/src/handler/mainMenu.h
+dcd5b1c6      2116  ce7e540a7d4fcb618894e7d346e4155a3ef9fc54bbb46374c8118a8901a49dac  pocketbook/src/main.cpp
+23dc8aa0       857  61cec76baf2e2eb289c9b77c29fe5863b4fe171487e346e3e8ce95f77ea91af9  pocketbook/src/ui/errorView/errorView.cpp
+4de05761      1211  33930bb782cbeafebfcf429c86289ca813807143306f05bec3394c98a1cc48cc  pocketbook/src/ui/errorView/errorView.h
+216ffcd2       477  d43a46345935112dd9c5a13d3b379c6ce5e0aa97571b3b1dc98a52d2c6dba79e  pocketbook/src/ui/listView/deviceView/deviceModel.h
+6eb71bb0      1080  d1cebe857872e32ba3f3d0a01afac4f520092d3b755eabeb0f80e052866104f3  pocketbook/src/ui/listView/deviceView/deviceViewEntry.cpp
+3f387609      1183  8567aa3190cf88983c2c72980f32e9ef483b5cd4e6189bab4c8d75f71b9e97f4  pocketbook/src/ui/listView/deviceView/deviceViewEntry.h
+efe1660b      1128  144d18904b84feec38d7b82aaace8a86f427cc844812556bd096a2eba5eddafd  pocketbook/src/ui/listView/fileView/fileViewEntry.cpp
+22f03bed      1113  44aeecdd519ed9c76d1657f72e130fa6228a25d004df8f945070422cee6df65b  pocketbook/src/ui/listView/fileView/fileViewEntry.h
+639c73b5      5910  5daf86622deb4d4edb689e1dc26a8669f2e4a8b1bccf92bf3fbe28453f4b6195  pocketbook/src/ui/listView/listView.h
+bf35eb8c       518  01e0e89bc5bd7a37d4f1774b00250708b676ba14d315cbda75271dc09df279f2  pocketbook/src/ui/listView/listViewEntry.cpp
+bfe0b5dc      1194  4ff47078272fdaf645adfdc857391cb9aa24093f6bc156de387cbe8b75117fa8  pocketbook/src/ui/listView/listViewEntry.h
+79a3cd63       294  1b2079c565e20df0023795955bb84a5749d38704696c466eb8b533c91aed2b29  pocketbook/src/ui/listView/model.h
+0a639c5b     16455  e08ecd33441c5f19f6f151bb39b85ee93606a992bf7e301776eeb448eab99c09  pocketbook/src/ui/textView/textView.cpp
+760999f9      3442  4618bbd742ca71d35f2000f34e239e4485d168f87b9819756ef4a4acb9db85fa  pocketbook/src/ui/textView/textView.h
+b549c574      2473  0d3de613e17e3c4238d4af64f0e7a5f3e6b82c41a674eaedaaff91a91b9c8225  pocketbook/src/ui/view.cpp
+3608c9e0      2436  3ca97a15bf49060d2d93ed589724bb3c57809174f012e812f5f48da0f81d7590  pocketbook/src/ui/view.h
+1f160351       886  c9ec76f143e00ad26e6d414b1829ccc714f9aa721dee44db1940008d886af914  pocketbook/src/util/log.cpp
+3a0376ba       944  2c75b327779c8ba60725901bc7baddb2bdc4af71d1e051d635733844c357069d  pocketbook/src/util/log.h
+5d13f111      1249  dfea5f842bb4a49bc6ab488aaaaa986577e6247545f237aa61687209c43d1127  pocketbook/src/util/util.h
+8749767b      1646  cd055557e4a30cee2d10596c8d64d71cc9aad88b0832642c05e3f3b5988e1c84  pocketbook/tests/keymap_test.cpp
+c024f777      4557  ead3415a7c910263e6d33601fe78b9c21bc0d8b67c5719ab66405e63198f97bb  pocketbook/tests/model_match_test.cpp
+18cfa04d       709  b9da0f4e412e5bac884c62a318853aa3737857b8155595418ec6e7e6cb6c6307  pocketbook/tests/run_host_tests.sh
+84d17897      1450  ee933580315b693a9b01e5d6bd56fed0c4b78480d275079786aea485ff39e858  pocketbook/tests/text_core_test.cpp

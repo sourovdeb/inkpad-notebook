@@ -1,0 +1,5 @@
+ok
+ok
+ok
+workspace core: UTF-8, edits, undo, selection, formatting, exports, size limit, atomic save OK
+workspace UI test double: keyboard, cards, formatting, preview dispatch, selection, rotation, autosave, external-conflict recovery OK
