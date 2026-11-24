@@ -19,6 +19,8 @@ Target: PB743K3.
 - Menu-close tests pass.
 - Appearance tests pass.
 - JSON tests pass.
+- ARM B300 build passes.
+- ELF target is ARM EABI5.
 - GPL-3.0 remains.
 
 The fixture uses stubs.
@@ -45,7 +47,6 @@ It is not firmware.
 
 ## Not proven here
 
-- PocketBook SDK build.
 - InkView menu appearance.
 - InkView touch timing.
 - Screen keyboard callbacks.
@@ -56,7 +57,7 @@ It is not firmware.
 - Colour rendering.
 - Battery and crash behavior.
 
-The SDK is not installed.
+The SDK build used B300 6.8.
 
 No reader ran this build.
 
