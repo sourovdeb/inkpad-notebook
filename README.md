@@ -46,11 +46,15 @@ The user validated connectivity.
 
 Host tests pass.
 
+ARM B300 build passes.
+
 Reader tests remain required.
 
-No binary is claimed here.
-
 Build with the SDK.
+
+The PB743K3 binary is packaged.
+
+It remains hardware-unverified.
 
 ## Repository map
 
@@ -133,6 +137,10 @@ cmake --build build-b300 \
 The output is:
 
 `build-b300/bin/InkPad-Notebook.app`
+
+The package is:
+
+`dist/InkPad-Notebook-0.3.0-PB743K3-install.zip`
 
 ## Build on Windows
 
@@ -247,6 +255,10 @@ It supports italic markers.
 Complex Markdown remains source.
 
 DOCX and PDF need conversion.
+
+The legacy target is optional.
+
+Set `BUILD_LEGACY_TYPEWRITER=ON`.
 
 ## Limits
 

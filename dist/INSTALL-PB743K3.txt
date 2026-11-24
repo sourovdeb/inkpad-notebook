@@ -1,0 +1,21 @@
+InkPad Notebook 0.3.0
+PB743K3 install package
+
+1. Connect the reader.
+2. Open the applications folder.
+3. Copy InkPad-Notebook.app there.
+4. Create textEditor at root.
+5. Copy text files there.
+6. Copy kbLayouts/fr.keys to:
+   system/config/textEditor/map.keys
+7. Pair the keyboard.
+8. Eject the reader safely.
+9. Launch InkPad Notebook.
+
+The app targets PB743K3.
+The binary needs InkView.
+Reader testing remains required.
+
+Rollback:
+Delete applications/InkPad-Notebook.app.
+Leave textEditor files intact.

@@ -1,7 +1,7 @@
 Sanitizer status
 
 Host tests: passed.
-AddressSanitizer: not rerun for 0.3.0.
-UndefinedBehaviorSanitizer: not rerun for 0.3.0.
-LeakSanitizer: not available here.
+AddressSanitizer: UI test passed.
+UndefinedBehaviorSanitizer: UI test passed.
+LeakSanitizer: disabled for this run.
 Reader runtime: not tested.

@@ -12,6 +12,8 @@ set(CMAKE_SYSTEM_VERSION 1.0)
 set(CMAKE_SYSTEM_PROCESSOR armv7a)
 set(CMAKE_C_COMPILER "${TOOLCHAIN_PATH}/usr/bin/arm-obreey-linux-gnueabi-clang")
 set(CMAKE_CXX_COMPILER "${TOOLCHAIN_PATH}/usr/bin/arm-obreey-linux-gnueabi-clang++")
+set(PB_SYSROOT "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot")
+set(CMAKE_SYSROOT "${PB_SYSROOT}")
 
 project(InkPad-Notebook VERSION 0.3.0 LANGUAGES C CXX)
 
@@ -22,17 +24,17 @@ set(BUILD_SHARED_LIBS ON)
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-set(CMAKE_FIND_ROOT_PATH "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot/")
+set(CMAKE_FIND_ROOT_PATH "${PB_SYSROOT}/")
 set(CMAKE_INCLUDE_PATH "/usr/include")
 message("CMAKE_FIND_ROOT_PATH=${CMAKE_FIND_ROOT_PATH}")
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
-include_directories("${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot/usr/include/freetype2")
+include_directories("${PB_SYSROOT}/usr/include/freetype2")
 list(APPEND CMAKE_MODULE_PATH "${TOOLCHAIN_PATH}/usr/share/cmake/modules")
 list(REMOVE_DUPLICATES CMAKE_MODULE_PATH)
-set(QT_QMAKE_EXECUTABLE "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot/usr/qt5/bin/qmake")
-set(CMAKE_PREFIX_PATH "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot/ebrmain/lib/cmake")
+set(QT_QMAKE_EXECUTABLE "${PB_SYSROOT}/usr/qt5/bin/qmake")
+set(CMAKE_PREFIX_PATH "${PB_SYSROOT}/ebrmain/lib/cmake")
 
 set(CMAKE_C_FLAGS "-fsigned-char -Werror-return-type" CACHE STRING "" FORCE)
 set(CMAKE_CXX_FLAGS "-fsigned-char -Werror-return-type" CACHE STRING "" FORCE)
@@ -58,6 +60,22 @@ list(APPEND PB_LINK_DIRECTORIES "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/
 list(APPEND PB_INCLUDE_DIRECTORIES "${TOOLCHAIN_PATH}/usr/arm-obreey-linux-gnueabi/sysroot/usr/include")
 
 
+option(BUILD_LEGACY_TYPEWRITER "Build the retained upstream Typewriter target" OFF)
+
+include_directories(
+    ${CMAKE_SOURCE_DIR}/src/handler/
+    ${CMAKE_SOURCE_DIR}/src/util/
+    ${CMAKE_SOURCE_DIR}/src/ui/
+    ${CMAKE_SOURCE_DIR}/src/ui/listView/
+    ${CMAKE_SOURCE_DIR}/src/ui/listView/fileView/
+    ${CMAKE_SOURCE_DIR}/src/ui/listView/deviceView/
+    ${CMAKE_SOURCE_DIR}/src/ui/textView/
+    ${CMAKE_SOURCE_DIR}/src/ui/errorView/
+    ${CMAKE_SOURCE_DIR}/src/api/
+    ${CMAKE_SOURCE_DIR}/src/device/
+    ${CMAKE_SOURCE_DIR}/src/core/
+)
+
 set(SOURCES ${CMAKE_SOURCE_DIR}/src/main.cpp
 			${CMAKE_SOURCE_DIR}/src/handler/eventHandler.cpp
 			${CMAKE_SOURCE_DIR}/src/handler/mainMenu.cpp
@@ -74,25 +92,13 @@ set(SOURCES ${CMAKE_SOURCE_DIR}/src/main.cpp
             ${CMAKE_SOURCE_DIR}/src/core/text_core.cpp
 )
 
-add_executable(Typewriter.app ${SOURCES})
+if(BUILD_LEGACY_TYPEWRITER)
+    add_executable(Typewriter.app ${SOURCES})
 
-include_directories(
-    ${CMAKE_SOURCE_DIR}/src/handler/
-    ${CMAKE_SOURCE_DIR}/src/util/
-    ${CMAKE_SOURCE_DIR}/src/ui/
-    ${CMAKE_SOURCE_DIR}/src/ui/listView/
-    ${CMAKE_SOURCE_DIR}/src/ui/listView/fileView/
-    ${CMAKE_SOURCE_DIR}/src/ui/listView/deviceView/
-    ${CMAKE_SOURCE_DIR}/src/ui/textView/
-    ${CMAKE_SOURCE_DIR}/src/ui/errorView/
-    ${CMAKE_SOURCE_DIR}/src/api/
-    ${CMAKE_SOURCE_DIR}/src/device/
-    ${CMAKE_SOURCE_DIR}/src/core/
-)
+    target_link_libraries(Typewriter.app PRIVATE inkview freetype stdc++fs)
 
-target_link_libraries(Typewriter.app PRIVATE inkview freetype stdc++fs)
-
-install(TARGETS Typewriter.app)
+    install(TARGETS Typewriter.app)
+endif()
 
 add_executable(InkPad-Notebook.app
     src/workspace.cpp src/core/workspace_core.cpp)

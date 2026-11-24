@@ -2,5 +2,6 @@ InkPad Notebook 0.3.0
 
 Host build: passed.
 Host tests: passed.
-ARM build: pending SDK availability.
+ARM build: passed.
+Target: PB743K3 B300.
 Reader run: pending hardware.
