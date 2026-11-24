@@ -377,7 +377,7 @@ public:
     }
     void showMenu(int category) {
         modal=true;leftShift=rightShift=leftCtrl=rightCtrl=altgr=false;
-        menuItems.clear();menuText.clear();menuItems.reserve(20);menuText.reserve(20);
+        menuItems.clear();menuText.clear();menuItems.reserve(32);menuText.reserve(32);
         auto add=[&](int id,const string &s,bool enabled=true) {menuText.push_back(s);menuItems.push_back({static_cast<short>(enabled?ITEM_ACTIVE:ITEM_INACTIVE),static_cast<short>(id),const_cast<char*>(menuText.back().c_str()),nullptr});};
         bool edit=!home;
         if(category==0) {add(101,"New document");add(102,"Documents");add(103,"Save",edit);add(104,"Save copy",edit);add(105,"Rename",edit);add(106,"Export TXT",edit);add(107,"Export Markdown",edit);add(108,"Export HTML",edit);add(112,"Export JSON",edit);add(109,"Sharing");add(111,"Bluetooth send",edit);add(110,"Exit");}
